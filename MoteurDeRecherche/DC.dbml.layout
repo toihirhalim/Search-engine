@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DC">
+  <DataContextMoniker Name="/DCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e8a20d90-886b-4737-ae06-ffffa7442cd3" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DCDataContext/Mot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa27f8e0-4abd-49ec-b803-2cfaaa87145e" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edce503c-ad4a-4e7d-8610-cf855ab52ca1" absoluteBounds="3.375, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DCDataContext/Recherche" />
+      <nestedChildShapes>
+        <elementListCompartment Id="baac6554-e1b0-4f67-a0a0-ac091acb3da1" absoluteBounds="3.39, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.53449625651042); (3.375 : 1.53449625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DCDataContext/Mot/Mot_Recherche" />
+      <nodes>
+        <classShapeMoniker Id="e8a20d90-886b-4737-ae06-ffffa7442cd3" />
+        <classShapeMoniker Id="edce503c-ad4a-4e7d-8610-cf855ab52ca1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5bc620c5-0fe0-48ff-88d7-bf6452a3e932" absoluteBounds="3.375, 3.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DCDataContext/Historique" />
+      <nestedChildShapes>
+        <elementListCompartment Id="96846167-442b-4e41-a87e-a6af8a216543" absoluteBounds="3.3899999999999997, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 2.7612939453125); (4.375 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DCDataContext/Recherche/Recherche_Historique" />
+      <nodes>
+        <classShapeMoniker Id="edce503c-ad4a-4e7d-8610-cf855ab52ca1" />
+        <classShapeMoniker Id="5bc620c5-0fe0-48ff-88d7-bf6452a3e932" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e1cad598-0d24-4f4b-9cbc-a1a9accd9f33" absoluteBounds="6.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DCDataContext/Lien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1eda7e1a-a047-4431-bb66-f83904afff16" absoluteBounds="6.515, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5 : 1.63064697265625); (5.375 : 1.63064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DCDataContext/Lien/Lien_Recherche" />
+      <nodes>
+        <classShapeMoniker Id="e1cad598-0d24-4f4b-9cbc-a1a9accd9f33" />
+        <classShapeMoniker Id="edce503c-ad4a-4e7d-8610-cf855ab52ca1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

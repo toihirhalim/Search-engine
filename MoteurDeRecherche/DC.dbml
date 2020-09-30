@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="maBase1" Class="DCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\maBase1.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="maBase1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Mot" Member="Mot">
+    <Type Name="Mot">
+      <Column Name="IdMot" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Texte" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="Mot_Recherche" Member="Recherche" ThisKey="IdMot" OtherKey="IdMot" Type="Recherche" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recherche" Member="Recherche">
+    <Type Name="Recherche">
+      <Column Name="IdSearch" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdMot" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdLien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Recherche_Historique" Member="Historique" ThisKey="IdSearch" OtherKey="IdSearch" Type="Historique" />
+      <Association Name="Mot_Recherche" Member="Mot" ThisKey="IdMot" OtherKey="IdMot" Type="Mot" IsForeignKey="true" />
+      <Association Name="Lien_Recherche" Member="Lien" ThisKey="IdLien" OtherKey="IdLien" Type="Lien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Historique" Member="Historique">
+    <Type Name="Historique">
+      <Column Name="IdHist" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateHist" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IdSearch" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Recherche_Historique" Member="Recherche" ThisKey="IdSearch" OtherKey="IdSearch" Type="Recherche" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lien" Member="Lien">
+    <Type Name="Lien">
+      <Column Name="IdLien" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrlText" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UrlTitle" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="Lien_Recherche" Member="Recherche" ThisKey="IdLien" OtherKey="IdLien" Type="Recherche" />
+    </Type>
+  </Table>
+</Database>

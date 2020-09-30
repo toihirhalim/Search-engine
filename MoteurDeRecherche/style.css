@@ -1,0 +1,58 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: serif;
+    color: dimgray;
+}
+
+.auto-style1 {
+    width: 612px;
+    height: 30px;
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container1 {
+    flex: 1;
+    text-align: center;
+}
+
+.container2 {
+    flex: 5;
+    display: flex;
+}
+
+.results {
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.linkResult {
+    font-size: 23px;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: blue;
+}
+
+    a:visited {
+        color: #8885d3;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:active {
+        text-decoration: underline;
+    }
